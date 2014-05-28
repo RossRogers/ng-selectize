@@ -25,6 +25,10 @@ Directive: 'selectize'
 * `selectize` - this attribute is passed directly to [selectize.js](https://github.com/brianreavis/selectize.js/blob/master/docs/api.md)
     whose parameters are defined in [`selectize.js's` documentation.](https://github.com/brianreavis/selectize.js/blob/master/docs/usage.md#options)
     
+    This parameter can have references to functions and objects on your `$scope`
+    as they will be automatically resolved to the object reference itself 
+    through use of the [`$scope.$eval`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$eval)
+    
 * `selectize-data` - tells the AngularJS `selectize` directive to
     listen for any changes to the specified data *array* in the current
     [`$scope`](https://docs.angularjs.org/guide/scope) and then to update the
