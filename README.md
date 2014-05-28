@@ -11,7 +11,10 @@ Directive: 'selectize'
 
     <select 
       name="" 
-      selectize="{  delimiter: ',', persist: false }" 
+      selectize="{
+        delimiter: ',',
+        persist: false 
+      }" 
       [selectize-data="MyAngularJSDataToWatch"]
       [selectize-inst-ref="data.place_to_put_selectize_object_reference[42]"]
     >
