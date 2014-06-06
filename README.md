@@ -15,7 +15,8 @@ Directive: 'selectize'
         delimiter: ',',
         persist: false 
       }" 
-      [selectize-data="MyAngularJSDataToWatch"]
+      [selectize-options-ng-model="MyAngularJSDataToWatch"]
+      [selectize-value-ng-model="SelectedValue"]
       [selectize-inst-ref="data.place_to_put_selectize_object_reference[42]"]
     >
 
@@ -29,7 +30,7 @@ Directive: 'selectize'
     as they will be automatically resolved to the object reference itself 
     through use of the [`$scope.$eval`](https://docs.angularjs.org/api/ng/type/$rootScope.Scope#$eval)
     
-* `selectize-data` - tells the AngularJS `selectize` directive to
+* `selectize-options-ng-model` - tells the AngularJS `selectize` directive to
     listen for any changes to the specified data *array* in the current
     [`$scope`](https://docs.angularjs.org/guide/scope) and then to update the
     options in the selectize widget with any new options in the updated array.
@@ -38,6 +39,10 @@ Directive: 'selectize'
     to the JSON `labelField` and `valueField` parameters that are the values of
     the element's `selectize` attribute.  Defaults for those parameters may be
     seen in the [`selectize.js` options documentation](https://github.com/brianreavis/selectize.js/blob/master/docs/usage.md#options)
+
+* `selectize-value-ng-model` - location that the selected value will be placed
+    when the user sets it and a way to set the selected value which will 
+    propagate to the selectize inst.
     
 * `selectize-inst-ref` - a variable name under `$scope` where a reference to
     the 
