@@ -62,7 +62,6 @@ angular.module('clientApp').directive("selectize", ['$timeout','$log',function($
               return
             }
             scope.$apply(function(){
-              $log.log("setting ng model to value=",value)
               scope.__selectize_value_tmp = value
               scope.$eval(attrs.selectizeValueNgModel+" = __selectize_value_tmp")
               delete scope.__selectize_value_tmp
